@@ -18,7 +18,7 @@ export default function Dashboard() {
                     <Text style={styles.welcomeText}>Welcome,</Text>
                     <Text style={styles.nameText}>Sarvesh!</Text>
                 </View>
-                <TouchableOpacity style={styles.bellButton}>
+                <TouchableOpacity style={styles.bellButton} onPress={() => router.push("/notifications")}>
                     <Ionicons name="notifications-outline" size={28} color="#fff" />
                 </TouchableOpacity>
             </View>
@@ -68,26 +68,26 @@ export default function Dashboard() {
 
             {/* Bottom Navigation Bar */}
             <View style={styles.bottomBar}>
-                <TouchableOpacity style={styles.tabItem}>
-                    <View style={styles.activeTabIcon}>
-                        <Ionicons name="home" size={24} color="#000" />
-                    </View>
+                {/* Home Tab (Active) */}
+                <TouchableOpacity style={[styles.tabItem, styles.activeTabItem]}>
+                    <Ionicons name="home" size={26} color="#000" style={styles.tabIcon} />
                     <Text style={styles.activeTabText}>Home</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.tabItem}>
-                    <View style={styles.createIcon}>
-                        <Ionicons name="add" size={32} color="#d17228" />
-                    </View>
+                {/* Create New Tab */}
+                <TouchableOpacity style={styles.tabItem} onPress={() => router.push("/inventory")}>
+                    <Ionicons name="add" size={33} color="#d17228" style={styles.tabIcon} />
                     <Text style={styles.tabText}>Create New</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.tabItem}>
-                    <Ionicons name="journal-outline" size={24} color="#fff" />
+                {/* Journalling Tab */}
+                <TouchableOpacity style={styles.tabItem} onPress={() => router.push("/journalling")}>
+                    <Ionicons name="journal" size={26} color="#fff" style={styles.tabIcon} />
                     <Text style={styles.tabText}>Journalling</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.tabItem}>
+                {/* Profile Tab */}
+                <TouchableOpacity style={styles.tabItem} onPress={() => router.push("/profile")}>
                     <Image
                         source={{ uri: "https://via.placeholder.com/40" }}
                         style={styles.profileIcon}
@@ -103,24 +103,24 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: "#0d0d0d",
-        paddingHorizontal: 20,
+        paddingHorizontal: 15,
     },
     header: {
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
         marginTop: 10,
-        marginBottom: 30,
+        marginBottom: 20,
     },
     welcomeText: {
         color: "#fff",
         fontSize: 32,
-        fontFamily: "Inter_700Bold",
+        fontFamily: "BricolageGrotesque_800ExtraBold",
     },
     nameText: {
         color: "#fff",
         fontSize: 32,
-        fontFamily: "Inter_900Black", // Heavier weight for name? Or check font... Image looks bold.
+        fontFamily: "BricolageGrotesque_800ExtraBold",
     },
     bellButton: {
         width: 50,
@@ -132,26 +132,27 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     scrollContent: {
-        paddingBottom: 100, // Space for bottom bar
+        paddingBottom: 110, // Increased to account for the new bottom bar height if needed
     },
     gridContainer: {
         flexDirection: "row",
         justifyContent: "space-between",
-        marginBottom: 20,
+        marginBottom: 15,
+        gap: 15,
     },
     gridItem: {
-        width: "48%",
+        flex: 1,
         height: 150,
-        backgroundColor: "#1a1a1a", // Dark grey
-        borderRadius: 12,
+        backgroundColor: "#1a1a1a",
+        borderRadius: 16,
         borderWidth: 1,
         borderColor: "#333",
     },
     musicCard: {
         backgroundColor: "#1a1a1a",
-        borderRadius: 16,
+        borderRadius: 20,
         padding: 15,
-        marginBottom: 20,
+        marginBottom: 15,
         borderWidth: 1,
         borderColor: "#333",
     },
@@ -160,9 +161,9 @@ const styles = StyleSheet.create({
         marginBottom: 15,
     },
     albumArt: {
-        width: 80,
-        height: 80,
-        borderRadius: 8,
+        width: 60,
+        height: 60,
+        borderRadius: 10,
         backgroundColor: "#333",
     },
     trackInfo: {
@@ -172,9 +173,9 @@ const styles = StyleSheet.create({
     },
     trackTitle: {
         color: "#fff",
-        fontSize: 18,
+        fontSize: 16,
         fontFamily: "Inter_700Bold",
-        lineHeight: 24,
+        lineHeight: 22,
     },
     controlsRow: {
         flexDirection: "row",
@@ -182,16 +183,16 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
     },
     playButton: {
-        width: 40,
-        height: 40,
-        borderRadius: 20,
-        backgroundColor: "#d17228", // Orange
+        width: 44,
+        height: 44,
+        borderRadius: 22,
+        backgroundColor: "#d17228",
         alignItems: "center",
         justifyContent: "center",
     },
     rightControls: {
         flexDirection: "row",
-        gap: 20,
+        gap: 15,
         alignItems: "center",
     },
     iconButton: {
@@ -201,58 +202,64 @@ const styles = StyleSheet.create({
         width: "100%",
         height: 150,
         backgroundColor: "#1a1a1a",
-        borderRadius: 12,
+        borderRadius: 16,
         borderWidth: 1,
         borderColor: "#333",
     },
+    // Bottom Navigation Styles
     bottomBar: {
         position: "absolute",
-        bottom: 0,
-        left: 0,
-        right: 0,
-        height: 90,
+        bottom: 40,
+        left: 20,
+        right: 20,
         backgroundColor: "#000",
         flexDirection: "row",
-        justifyContent: "space-around",
-        alignItems: "center",
-        borderTopWidth: 1,
-        borderTopColor: "#333",
-        paddingBottom: 20,
+        justifyContent: "space-between",
+        padding: 8, // Slightly increased padding
+        borderRadius: 20,
+        borderWidth: 1,
+        borderColor: "#1a1a1a",
+        // Shadow for depth
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 10,
+        },
+        shadowOpacity: 0.3,
+        shadowRadius: 20,
+        elevation: 10,
     },
     tabItem: {
+        flex: 1,
+        height: 55, // Slightly increased height
+        backgroundColor: "#000",
+        borderRadius: 15,
         alignItems: "center",
         justifyContent: "center",
+        marginHorizontal: 4,
     },
-    activeTabIcon: {
+    activeTabItem: {
         backgroundColor: "#fff",
-        width: 40,
-        height: 30,
-        borderRadius: 8,
-        alignItems: "center",
-        justifyContent: "center",
-        marginBottom: 4,
     },
-    activeTabText: {
-        color: "#fff",
-        fontSize: 10,
-        fontFamily: "Inter_700Bold",
-    },
-    createIcon: {
-        marginBottom: 4,
-        borderWidth: 1, // Visual style tweak to match specific "plus" look if needed
-        borderColor: "#333",
-        borderRadius: 8,
-        padding: 2,
+    tabIcon: {
+        marginBottom: 2, // Tight spacing
     },
     tabText: {
         color: "#fff",
+        fontSize: 10, // Small, clean font size
+        fontFamily: "Inter_700Bold",
+    },
+    activeTabText: {
+        color: "#000",
         fontSize: 10,
-        fontFamily: "Inter_500Medium",
+        fontFamily: "Inter_700Bold",
     },
     profileIcon: {
-        width: 24,
-        height: 24,
-        borderRadius: 12,
-        marginBottom: 4,
+        width: 28, // Slightly increased size
+        height: 28,
+        borderRadius: 14,
+        marginBottom: 2,
+        borderWidth: 1.5,
+        borderColor: "#333",
     },
 });

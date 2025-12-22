@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     title: {
         color: "#fff",
         fontSize: 54,
-        fontFamily: "BricolageGrotesque_800ExtraBold",
+        fontFamily: "Gilroy_800ExtraBold",
         marginBottom: 30,
         textAlign: "center",
     },
@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         paddingHorizontal: 14,
         fontSize: 20,
-        fontFamily: "Inter_700Bold",
+        fontFamily: "Gilroy_700Bold",
         width: "99%",
         alignSelf: "center",
     },
@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
     termsText: {
         color: "#888",
         fontSize: 16,
-        fontFamily: "Inter_400Regular",
+        fontFamily: "Gilroy_400Regular",
     },
     linkText: {
         color: "#304ffe", // Blueish link color from image
@@ -189,6 +189,6 @@ const styles = StyleSheet.create({
     buttonText: {
         color: "#fff",
         fontSize: 20,
-        fontFamily: "Inter_700Bold",
+        fontFamily: "Gilroy_700Bold",
     },
 });

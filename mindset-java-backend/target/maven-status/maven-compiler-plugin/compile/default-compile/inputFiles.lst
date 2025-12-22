@@ -1,0 +1,13 @@
+D:\Mindset\mindset-java-backend\src\main\java\com\mindset\backend\controller\QuoteController.java
+D:\Mindset\mindset-java-backend\src\main\java\com\mindset\backend\security\JwtUtil.java
+D:\Mindset\mindset-java-backend\src\main\java\com\mindset\backend\security\JwtAuthenticationFilter.java
+D:\Mindset\mindset-java-backend\src\main\java\com\mindset\backend\service\AuthService.java
+D:\Mindset\mindset-java-backend\src\main\java\com\mindset\backend\MindsetBackendApplication.java
+D:\Mindset\mindset-java-backend\src\main\java\com\mindset\backend\controller\AuthController.java
+D:\Mindset\mindset-java-backend\src\main\java\com\mindset\backend\entity\User.java
+D:\Mindset\mindset-java-backend\src\main\java\com\mindset\backend\service\CustomUserDetailsService.java
+D:\Mindset\mindset-java-backend\src\main\java\com\mindset\backend\repository\UserRepository.java
+D:\Mindset\mindset-java-backend\src\main\java\com\mindset\backend\config\SecurityConfig.java
+D:\Mindset\mindset-java-backend\src\main\java\com\mindset\backend\entity\Quote.java
+D:\Mindset\mindset-java-backend\src\main\java\com\mindset\backend\repository\QuoteRepository.java
+D:\Mindset\mindset-java-backend\src\main\java\com\mindset\backend\service\QuoteService.java

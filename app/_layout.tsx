@@ -16,6 +16,11 @@ export default function RootLayout() {
     Inter_900Black,
     BricolageGrotesque_800ExtraBold,
     Brygada1918_700Bold,
+    "Gilroy_400Regular": require("../assets/fonts/Gilroy-Regular.ttf"),
+    "Gilroy_500Medium": require("../assets/fonts/Gilroy-Medium.ttf"),
+    "Gilroy_700Bold": require("../assets/fonts/Gilroy-Bold.ttf"),
+    "Gilroy_800ExtraBold": require("../assets/fonts/Gilroy-ExtraBold.ttf"),
+    "Gilroy_900Black": require("../assets/fonts/Gilroy-Black.ttf"),
   });
 
   useEffect(() => {

@@ -1,0 +1,15 @@
+com\mindset\backend\controller\AuthController.class
+com\mindset\backend\controller\QuoteController.class
+com\mindset\backend\config\SecurityConfig.class
+com\mindset\backend\controller\AuthController$AuthRequest.class
+com\mindset\backend\entity\User.class
+com\mindset\backend\service\AuthService.class
+com\mindset\backend\service\CustomUserDetailsService.class
+com\mindset\backend\repository\QuoteRepository.class
+com\mindset\backend\repository\UserRepository.class
+com\mindset\backend\security\JwtUtil.class
+com\mindset\backend\entity\Quote.class
+com\mindset\backend\MindsetBackendApplication.class
+com\mindset\backend\security\JwtAuthenticationFilter.class
+com\mindset\backend\controller\QuoteController$QuoteRequest.class
+com\mindset\backend\service\QuoteService.class

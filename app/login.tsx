@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     logoText: {
         color: "#fff",
         fontSize: 60,
-        fontFamily: "Inter_900Black",
+        fontFamily: "Gilroy_900Black",
     },
     logoDot: {
         width: 15,
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     title: {
         color: "#fff",
         fontSize: 54, // Requested size
-        fontFamily: "BricolageGrotesque_800ExtraBold",
+        fontFamily: "Gilroy_800ExtraBold",
         marginBottom: 50,
         textAlign: "center",
     },
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
         paddingVertical: 12,
         paddingHorizontal: 15,
         fontSize: 23, // Requested size
-        fontFamily: "Inter_700Bold", // Fallback for Gilroy Bold
+        fontFamily: "Gilroy_700Bold",
         opacity: 0.8,
         width: "99%", // Ensure border is visible 
         alignSelf: "center",
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
         color: "#888",
         textAlign: "center",
         fontSize: 18, // Requested size
-        fontFamily: "Inter_400Regular", // Fallback for Gilroy Regular
+        fontFamily: "Gilroy_500Medium",
         marginTop: 5,
     },
     linkText: {
@@ -123,6 +123,6 @@ const styles = StyleSheet.create({
     buttonText: {
         color: "#fff",
         fontSize: 20,
-        fontFamily: "Inter_700Bold",
+        fontFamily: "Gilroy_700Bold",
     },
 });

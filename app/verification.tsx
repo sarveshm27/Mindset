@@ -91,20 +91,20 @@ const styles = StyleSheet.create({
     title: {
         color: "#fff",
         fontSize: 48,
-        fontFamily: "BricolageGrotesque_800ExtraBold",
+        fontFamily: "Gilroy_800ExtraBold",
         marginBottom: 10,
     },
     subtitle: {
         color: "#ccc",
         fontSize: 16,
-        fontFamily: "Inter_500Medium",
+        fontFamily: "Gilroy_500Medium",
         marginBottom: 30,
         lineHeight: 22,
     },
     label: {
         color: "#fff",
         fontSize: 16,
-        fontFamily: "Inter_700Bold",
+        fontFamily: "Gilroy_700Bold",
         marginBottom: 15,
     },
     otpContainer: {
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
         color: "#fff",
         textAlign: "center",
         fontSize: 24,
-        fontFamily: "Inter_700Bold",
+        fontFamily: "Gilroy_700Bold",
         backgroundColor: "transparent",
     },
     button: {
@@ -137,6 +137,6 @@ const styles = StyleSheet.create({
     buttonText: {
         color: "#fff",
         fontSize: 20,
-        fontFamily: "Inter_700Bold",
+        fontFamily: "Gilroy_700Bold",
     },
 });
